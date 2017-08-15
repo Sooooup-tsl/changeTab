@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="tab.css">
+	<script type='text/javascript' src='https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js' charset='utf-8'></script>
+	<script src="tab.js"></script>
+</head>
+<body>
+	<div class="tab">
+	　　<ul class="tab_nav">
+	　　　　<li class="current">接机</li>
+	　　　　<li>送机</li>
+	　　</ul>
+
+	　　<div class="tab_content">
+	　　　　<div style="display:block;">接机content</div>
+	　　　　<div>送机content</div>
+	　　</div>
+	</div>
+	<script>
+		$(function(){
+            $('.tab').tab({
+                currentClass: 'current',
+                tabNav: '.tab_nav > li',
+                tabContent: '.tab_content > div',
+                eventType:'click'
+            });
+        });
+	</script>
+</body>
+</html>
